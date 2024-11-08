@@ -16,7 +16,9 @@ class Person(models.Model):
 
 
 class Author(Person):
-    pass
+    class Meta:
+        verbose_name = "Автор"
+        verbose_name_plural = "Авторы"    
 
 
 class Language(models.Model):
@@ -43,6 +45,6 @@ class Article(models.Model):
         verbose_name_plural = "Статьи"
 
     def __str__(self):
-        return self.title
-
+        return self.title    
+    
     
